@@ -24,9 +24,7 @@ eg:
         (which is actually the first node with a value)
     
     NULL is called NULL Pointer
-
-
-
+    
 """
 
 
@@ -129,4 +127,3 @@ if __name__ == "__main__":
     linked_list2.add_at_head(1)
     linked_list2.add_at_middle(5, 1)
     linked_list2.display()  # Output: 1 -> 5 -> 2 -> 3 -> None
-    
