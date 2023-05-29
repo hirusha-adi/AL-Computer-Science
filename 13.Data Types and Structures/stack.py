@@ -3,6 +3,8 @@
 What is Stack?
     https://www.youtube.com/watch?v=I37kGX-nZEI&pp=ygUQc3RhY2tzIGV4cGxhaW5lZA%3D%3D
 
+    
+Last in First Out    
 """
 
 class Stack:
