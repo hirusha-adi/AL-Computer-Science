@@ -40,5 +40,3 @@ REPEAT
     n ← n – 1
 UNTIL NoMoreSwaps = TRUE
 ```
-
-# Difference
