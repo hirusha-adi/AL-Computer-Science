@@ -24,6 +24,7 @@ eg:
         (which is actually the first node with a value)
     
     NULL is called NULL Pointer
+        use "-1" as the null pointer
 
 
 NOTE: The Python code below goes BEYOND the syllabus
