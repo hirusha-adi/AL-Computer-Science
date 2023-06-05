@@ -5,8 +5,31 @@ What is Queue?
 
 First In First Out
 
-Involves a lot of moving data
+What is this?
+    A queue is a linear data structure that follows the First-In-First-Out (FIFO) 
+    principle, which means that the first element added to the queue will be the 
+    first one to be removed. It can be visualized as a line of people waiting for 
+    their turn, where the person who arrives first gets served first.
 
+    In a queue, new elements are added at one end called the rear or tail, and elements 
+    are removed from the other end called the front or head. This behavior is known 
+    as enqueueing (adding) and dequeueing (removing) elements from the queue.
+
+What are the operations associated with it?
+    Enqueue: 
+        Adds an element to the rear of the queue.
+    
+    Dequeue: 
+        Removes the element from the front of the queue.
+    
+    Front: 
+        Returns the element at the front without removing it.
+    
+    IsEmpty: 
+        Checks if the queue is empty.
+    
+    Size: 
+        Returns the number of elements in the queue.
 """
 
 
@@ -32,7 +55,6 @@ class Queue:
         if self.is_empty():
             raise IndexError("Cannot peek into an empty queue.")
         return self.queue[0]
-    
 
 
 if __name__ == "__main__":
