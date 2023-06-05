@@ -1,7 +1,53 @@
+"""
+NOTE: This topic is COMPLETELY beyond the syllabus
 
+How does it work?
+    consists of a sequence of nodes, where each node contains two pointers or references: 
+        one pointing to the previous node and 
+        one pointing to the next node. 
+    this allows for traversal in both directions, making it different 
+    from a singly linked list, which only allows forward traversal
+
+What are the main characteristics?
+    Nodes: 
+        Each node in a doubly linked list contains two pointers, usually called 
+        "prev" and "next," which point to the previous and next nodes, respectively. 
+        In addition to the pointers, a node also holds the actual data or value 
+        associated with it.
+    
+    Head and Tail: 
+        A doubly linked list typically has a reference to the first node, called the 
+        "head," and a reference to the last node, called the "tail." These references 
+        help in efficiently traversing the list from both ends.
+
+    Bidirectional Traversal: 
+        The double linked list allows for traversal in both directions. Starting from 
+        the head, you can move forward by following the "next" pointers or move backward 
+        by following the "prev" pointers. This flexibility enables operations like 
+        searching, inserting, and deleting nodes in both directions.
+
+    Dynamic Size: 
+        Unlike arrays, which have a fixed size, a doubly linked list can dynamically 
+        grow or shrink as elements are added or removed. This makes it more flexible for 
+        managing data that may change frequently.
+
+    Insertion and Deletion: 
+        Insertion and deletion of nodes in a double linked list are relatively efficient. 
+        When inserting a new node, you simply update the adjacent nodes' pointers to link 
+        the new node correctly. Similarly, when deleting a node, you update the adjacent
+        nodes' pointers to bridge the gap created by removing the node.
+
+    Memory Overhead: 
+        One drawback of a doubly linked list is the additional memory required to store the 
+        extra pointers. Compared to a singly linked list, which only requires one pointer 
+        per node, a doubly linked list requires two pointers per node, increasing the overall 
+        memory overhead.
+    
+"""
 # Author: OMKAR PATHAK
 # Source Code: https://github.com/OmkarPathak/Data-Structures-using-Python/blob/master/Linked%20Lists/DoublyLinkedList.py
 # NOTE: This is a modified, improved version
+
 
 class Node(object):
     # Each node has its data and a pointer that points to next node in the Linked List
@@ -11,29 +57,12 @@ class Node(object):
         self.prev = previous
 
 
-class DoublyLinkedList(object):
+class DoubleLinkedList(object):
     def __init__(self):
         self.head = None
 
-    # for inserting at beginning of linked list
-    def insertAtStart(self, data):
-        if self.head == None:
-            newNode = Node(data)
-            self.head = newNode
-        else:
-            newNode = Node(data)
-            self.head.prev = newNode
-            newNode.next = self.head
-            self.head = newNode
-
-    # for inserting at end of linked list
-    def insertAtEnd(self, data):
-        newNode = Node(data)
-        temp = self.head
-        while (temp.next != None):
-            temp = temp.next
-        temp.next = newNode
-        newNode.prev = temp
+    # SUPPORT FUNCTIONS
+    # -----------------------------------------------
 
     # deleting a node from linked list
     def delete(self, data):
@@ -65,14 +94,42 @@ class DoublyLinkedList(object):
         if (temp == None):
             return
 
-    # for printing the contents of linked lists
+    # print the contents of the linked list
     def printdll(self):
         temp = self.head
         while (temp != None):
             print(temp.data, end=' ')
             temp = temp.next
 
-    def add_at_middle(self, data):
+    # check if double linked list is empty
+    def is_empty(self):
+        return self.head is None
+
+    # ACTION FUNCTIONS
+    # -----------------------------------------------
+
+    # for inserting at beginning of linked list
+    def insertAtStart(self, data):
+        if self.head == None:
+            newNode = Node(data)
+            self.head = newNode
+        else:
+            newNode = Node(data)
+            self.head.prev = newNode
+            newNode.next = self.head
+            self.head = newNode
+
+    # for inserting at end of linked list
+    def insertAtEnd(self, data):
+        newNode = Node(data)
+        temp = self.head
+        while (temp.next != None):
+            temp = temp.next
+        temp.next = newNode
+        newNode.prev = temp
+
+    # for inserting at the middle of linked list
+    def insertAtMiddle(self, data):
         new_node = Node(data)
         if self.is_empty():
             self.head = new_node
@@ -99,7 +156,7 @@ class DoublyLinkedList(object):
 
 
 if __name__ == '__main__':
-    dll = DoublyLinkedList()
+    dll = DoubleLinkedList()
     dll.insertAtStart(1)
     dll.insertAtStart(2)
     dll.insertAtEnd(3)
