@@ -3,8 +3,6 @@
 What is Queue?
     https://www.youtube.com/watch?v=v9BMdz5m5Vo
 
-First In First Out
-
 What is this?
     A queue is a linear data structure that follows the First-In-First-Out (FIFO) 
     principle, which means that the first element added to the queue will be the 
@@ -15,7 +13,7 @@ What is this?
     are removed from the other end called the front or head. This behavior is known 
     as enqueueing (adding) and dequeueing (removing) elements from the queue.
 
-What are the operations associated with it?
+What are the operations available with it?
     Enqueue: 
         Adds an element to the rear of the queue.
     
@@ -30,6 +28,8 @@ What are the operations associated with it?
     
     Size: 
         Returns the number of elements in the queue.
+        
+NOTE: The Python code below goes BEYOND the syllabus
 """
 
 
