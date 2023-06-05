@@ -5,10 +5,11 @@
 
 class Node(object):
     # Each node has its data and a pointer that points to next node in the Linked List
-    def __init__(self, data, next = None, previous = None):
+    def __init__(self, data, next=None, previous=None):
         self.data = data
         self.next = next
         self.prev = previous
+
 
 class DoublyLinkedList(object):
     def __init__(self):
@@ -29,7 +30,7 @@ class DoublyLinkedList(object):
     def insertAtEnd(self, data):
         newNode = Node(data)
         temp = self.head
-        while(temp.next != None):
+        while (temp.next != None):
             temp = temp.next
         temp.next = newNode
         newNode.prev = temp
@@ -37,19 +38,19 @@ class DoublyLinkedList(object):
     # deleting a node from linked list
     def delete(self, data):
         temp = self.head
-        if(temp.next != None):
+        if (temp.next != None):
             # if head node is to be deleted
-            if(temp.data == data):
+            if (temp.data == data):
                 temp.next.previous = None
                 self.head = temp.next
                 temp.next = None
                 return
             else:
-                while(temp.next != None):
-                    if(temp.data == data):
+                while (temp.next != None):
+                    if (temp.data == data):
                         break
                     temp = temp.next
-                if(temp.next):
+                if (temp.next):
                     # if element to be deleted is in between
                     temp.prev.next = temp.next
                     temp.next.previous = temp.prev
@@ -63,14 +64,14 @@ class DoublyLinkedList(object):
 
         if (temp == None):
             return
-    
+
     # for printing the contents of linked lists
     def printdll(self):
         temp = self.head
-        while(temp != None):
+        while (temp != None):
             print(temp.data, end=' ')
             temp = temp.next
-    
+
     def add_at_middle(self, data):
         new_node = Node(data)
         if self.is_empty():
@@ -95,6 +96,7 @@ class DoublyLinkedList(object):
                 new_node.next.prev = new_node
             else:
                 self.tail = new_node
+
 
 if __name__ == '__main__':
     dll = DoublyLinkedList()
