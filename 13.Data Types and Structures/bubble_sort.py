@@ -6,7 +6,7 @@ How does it work?
 
 Pseudocode:
     ```
-    n ← MaxIndex – 1
+    n ← MaxIndex - 1
     REPEAT
         NoMoreSwaps ← TRUE
         FOR j ← 0 TO n
@@ -18,7 +18,7 @@ Pseudocode:
                 NoMoreSwaps ← FALSE
             ENDIF
         NEXT j
-        n ← n – 1
+        n ← n - 1
     UNTIL NoMoreSwaps = TRUE
     ```
 
@@ -52,47 +52,48 @@ Summary:
     beginning to the end.
 """
 
-def while_for_implentation(list_a):
-    indexing_length = len(list_a) - 1 #SCan not apply comparision starting with last item of list (No item to right)
-    sorted = False #Create variable of sorted and set it equal to false
 
-    while not sorted:  #Repeat until sorted = True
+def while_for_implentation(list_a):
+    indexing_length = len(list_a) - 1  # SCan not apply comparision starting with last item of list (No item to right)
+    sorted = False  # Create variable of sorted and set it equal to false
+
+    while not sorted:  # Repeat until sorted = True
         sorted = True  # Break the while loop whenever we have gone through all the values
 
-        for i in range(0, indexing_length): # For every value in the list
-            if list_a[i]: #"Angled brackets not allowed in Youtube Description :( list_a[i+1]: #if value in list is greater than value directly to the right of it,
-                sorted = False # These values are unsorted
-                list_a[i], list_a[i+1] = list_a[i+1], list_a[i] #Switch these values
-    return list_a # Return our list "unsorted_list" which is not sorted.
+        for i in range(0, indexing_length):  # For every value in the list
+            if list_a[i]:  # "Angled brackets not allowed in Youtube Description :( list_a[i+1]: #if value in list is greater than value directly to the right of it,
+                sorted = False  # These values are unsorted
+                list_a[i], list_a[i+1] = list_a[i+1], list_a[i]  # Switch these values
+    return list_a  # Return our list "unsorted_list" which is not sorted.
+
 
 def for_for_1_implentation(arr):
     n = len(arr)
-    
+
     # Traverse through all array elements
     for i in range(n):
-        
+
         # Last i elements are already in place
         for j in range(0, n - i - 1):
-            
+
             # Swap if the element found is greater than the next element
             if arr[j] > arr[j + 1]:
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
 
     return arr
+
 
 def for_for_2_implentation(arr):
     n = len(arr)
-    
+
     # Traverse through all array elements in reverse order
     for i in range(n - 1, 0, -1):
-        
+
         # Iterate from the beginning to the current position
         for j in range(i):
-            
+
             # Swap if the element found is greater than the next element
             if arr[j] > arr[j + 1]:
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
 
     return arr
-
-

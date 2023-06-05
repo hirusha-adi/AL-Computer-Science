@@ -7,16 +7,17 @@ What is Stack?
 Last in First Out    
 """
 
+
 class Stack:
     def __init__(self) -> None:
         self._items = []
-    
+
     def isEmpty(self) -> bool:
         return len(self._items) == 0
-    
+
     def size(self):
         return len(self._items)
-    
+
     def push(self, item):
         self._items.append(item)
 
@@ -31,6 +32,7 @@ class Stack:
             return self._items[-1]
         else:
             raise IndexError("Stack is empty")
+
 
 if __name__ == "__main__":
     stack = Stack()
