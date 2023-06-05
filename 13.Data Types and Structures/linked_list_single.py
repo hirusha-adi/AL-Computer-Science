@@ -24,7 +24,9 @@ eg:
         (which is actually the first node with a value)
     
     NULL is called NULL Pointer
-    
+
+
+NOTE: The Python code below goes BEYOND the syllabus
 """
 
 
@@ -32,6 +34,7 @@ class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
+
 
 class LinkedList:
     def __init__(self):
@@ -55,7 +58,7 @@ class LinkedList:
             while current.next is not None:
                 current = current.next
             current.next = new_node
-    
+
     def add_at_middle(self, data, position):
         new_node = Node(data)
 
@@ -109,6 +112,7 @@ class LinkedList:
 
         print("None")
 
+
 if __name__ == "__main__":
     # Usage example
     linked_list = LinkedList()
@@ -120,7 +124,7 @@ if __name__ == "__main__":
     print(linked_list.search(3))  # Output: True
     linked_list.remove(2)
     linked_list.display()  # Output: 1 -> 3 -> 4 -> None
-        
+
     linked_list2 = LinkedList()
     linked_list2.add_at_head(3)
     linked_list2.add_at_head(2)
