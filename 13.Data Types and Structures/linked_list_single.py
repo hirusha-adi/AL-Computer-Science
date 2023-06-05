@@ -26,6 +26,9 @@ eg:
     NULL is called NULL Pointer
         use "-1" as the null pointer
 
+    If the linked list is empty, the Start Pointer will be
+    pointed to the NULL pointer as there is no data
+
 
 NOTE: The Python code below goes BEYOND the syllabus
 """
