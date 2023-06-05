@@ -1,4 +1,5 @@
 """
+NOTE: This topic is COMPLETELY beyond the syllabus
 
 What is a Circular Queue?
     https://www.youtube.com/watch?v=8sjFA-IX-Ww
@@ -9,6 +10,7 @@ Brings fix to:
     
 Eventually the queue will 'wrap around' to the beginning
 """
+
 
 class CircularQueue:
     def __init__(self, capacity):
