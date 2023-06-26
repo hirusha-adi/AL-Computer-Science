@@ -1256,10 +1256,13 @@ while not GameFinished:
         swap_this_player()
 ```
 
+
 # Task 14.15
+
 Fred surveys the students at his college to find out their favourite hobby. 
 - He wants to present the data as a tally chart.
 - Fred plans to enter the data into the computer as he surveys the students. After data entry is complete, he wants to output the total for each hobby. 
+
 ```
 1 Reading books 			 \\\
 2 Play computer games  \\\\\\\\
@@ -1269,6 +1272,7 @@ Fred surveys the students at his college to find out their favourite hobby.
 ```
 
 He starts by writing an algorithm:
+
 ```
 Initialise Tally array
 REPEAT
@@ -1291,11 +1295,13 @@ NEXT Index
 ## Answers
 
 1. 
+
 ```python
 Tally = [0] * 5
 ```
 
 2. 
+
 ```python
 Tally = [0] * 5
 
@@ -1310,6 +1316,7 @@ for index in range(5):
 ```
 
 3. 
+
 ```python
 Tally = [0] * 5
 Hobbies = ["Reading books", "Play computer games", "Sport", "Programming", "Watching TV"]
@@ -1325,6 +1332,7 @@ for index in range(5):
 ```
 
 4. 
+
 ```python
 Tally = [0] * 5
 Hobbies = ["Reading books", "Play computer games", "Sport", "Programming", "Watching TV"]
@@ -1343,6 +1351,7 @@ print("Data saved to hobby_data.txt file.")
 ```
 
 5. 
+
 ```python
 Tally = [0] * 5
 Hobbies = ["Reading books", "Play computer games", "Sport", "Programming", "Watching TV"]
@@ -1356,4 +1365,6 @@ with open("hobby_data.txt", "r") as file:
 for index in range(5):
     print(Hobbies[index] + ": " + str(Tally[index]))
 ```
+
+
 
